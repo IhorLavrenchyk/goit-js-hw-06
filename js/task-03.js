@@ -13,12 +13,14 @@ const images = [
   },
 ];
 // const list = document.querySelector('.gallery');
-const list = document.querySelector('.gallery');
+
 const createImg = images.map(image => {
-  let add = list.insertAdjacentHTML(
-    'beforeend',
-    `<li><img src=${image.url} alt='${image.alt}'width = 400 height = 300></li>`
-  );
+  let add = document
+    .querySelector('.gallery')
+    .insertAdjacentHTML(
+      'beforeend',
+      `<li><img src=${image.url} alt='${image.alt}'width = 400 height = 300></li>`
+    );
   return add;
 });
 list.classList.add(`taskthird`);
